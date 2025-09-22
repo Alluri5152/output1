@@ -1,0 +1,40 @@
+import random
+import string
+
+def generate_unique_password(length=12):
+    """
+    Generates a unique, random password.
+
+    The password will contain a mix of uppercase letters, lowercase letters,
+    digits, and punctuation characters.
+
+    Args:
+        length (int): The desired length of the password. Default is 12.
+
+    Returns:
+        str: The generated password.
+    """
+    # Define the character sets to use for the password
+    characters = string.ascii_letters + string.digits + string.punctuation
+    
+    # Ensure the password has at least one of each character type for strength
+    password = [
+        random.choice(string.ascii_lowercase),
+        random.choice(string.ascii_uppercase),
+        random.choice(string.digits),
+        random.choice(string.punctuation)
+    ]
+    
+    # Fill the rest of the password length with a random mix of characters
+    while len(password) < length:
+        password.append(random.choice(characters))
+
+    # Shuffle the list to randomize the position of the required characters
+    random.shuffle(password)
+    
+    # Join the list of characters into a single string
+    return "".join(password)
+
+# Example usage:
+new_password = generate_unique_password(16)
+print(f"Generated a unique password: {new_password}")
