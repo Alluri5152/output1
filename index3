@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+            color: #030303;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fff;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff0000;
+        }
+
+        .header .search-bar {
+            flex-grow: 1;
+            margin: 0 50px;
+            max-width: 600px;
+            display: flex;
+        }
+
+        .header .search-bar input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 20px 0 0 20px;
+            outline: none;
+        }
+
+        .header .search-bar button {
+            padding: 8px 15px;
+            border: 1px solid #ccc;
+            border-left: none;
+            background-color: #f8f8f8;
+            border-radius: 0 20px 20px 0;
+            cursor: pointer;
+        }
+
+        .header .user-icons img {
+            height: 24px;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+        
+        .main-container {
+            display: flex;
+        }
+
+        .sidebar {
+            width: 240px;
+            background-color: #fff;
+            height: calc(100vh - 60px);
+            padding-top: 20px;
+            overflow-y: auto;
+            border-right: 1px solid #
